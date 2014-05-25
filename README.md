@@ -9,6 +9,9 @@ http://www.pushwoosh.com/programming-push-notification/macosx/mac-os-x-push-noti
 The sample project is available here:  
 https://github.com/shaders/pushwoosh-sdk-samples/tree/master/Mac
 
+Documentation:
+https://rawgit.com/Pushwoosh/pushwoosh-mac-sdk/master/Documentation/index.html
+
 Pushwoosh team
 http://www.pushwoosh.com
 

@@ -5,10 +5,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <StoreKit/StoreKit.h>
 
 @class PushNotificationManager;
 @class CLLocation;
-@class PWLocationTracker;
 
 typedef NS_ENUM(NSInteger, PWSupportedOrientations) {
 	PWOrientationPortrait = 1 << 0,
@@ -147,7 +147,7 @@ typedef void(^pushwooshErrorHandler)(NSError *error);
 /**
   `PushNotificationManager` class offers access to the singletone-instance of the push manager responsible for registering the device with the APS servers, receiving and processing push notifications.
  */
-@interface PushNotificationManager : NSObject {
+@interface PushNotificationManager : NSObject <SKPaymentTransactionObserver> {
 	NSString *appCode;
 	NSString *appName;
 
@@ -192,7 +192,11 @@ typedef void(^pushwooshErrorHandler)(NSError *error);
 
 @property (nonatomic, retain) NSDictionary *pushNotifications;
 @property (nonatomic, assign) PWSupportedOrientations supportedOrientations;
-@property (nonatomic, retain) PWLocationTracker *locationTracker;
+
+/**
+ Enables gathering location tracking logs to Documents/PWLocationTracking.log. Default is 'NO'
+ */
+@property (nonatomic, assign) BOOL locationLoggingEnabled;
 
 /**
  Show push notifications alert when push notification is received while the app is running, default is `YES`
@@ -212,6 +216,17 @@ typedef void(^pushwooshErrorHandler)(NSError *error);
  @return A singleton object that represents the push manager.
  */
 + (PushNotificationManager *)pushManager;
+
+/**
+ Registers for push notifications. By default registeres for "UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert" flags.
+ Automatically detects if you have "newsstand-content" in "UIBackgroundModes" and adds "UIRemoteNotificationTypeNewsstandContentAvailability" flag.
+ */
+- (void) registerForPushNotifications;
+
+/**
+ Unregisters from push notifications. You should call this method in rare circumstances only, such as when a new version of the app drops support for remote notifications. Users can temporarily prevent apps from receiving remote notifications through the Notifications section of the Settings app. Apps unregistered through this method can always re-register.
+ */
+- (void) unregisterForPushNotifications;
 
 - (id) initWithApplicationCode:(NSString *)appCode appName:(NSString *)appName;
 
@@ -314,8 +329,13 @@ typedef void(^pushwooshErrorHandler)(NSError *error);
  */
 - (NSString *) getPushToken;
 
-//internal
-- (void) unregisterDevice;
+/**
+ Gets HWID. Unique device identifier that used in all API calls with Pushwoosh.
+ This is identifierForVendor for iOS >= 7.
+ 
+ @return Unique device identifier.
+ */
+- (NSString *) getHWID;
 
 - (void) handlePushRegistration:(NSData *)devToken;
 - (void) handlePushRegistrationString:(NSString *)deviceID;

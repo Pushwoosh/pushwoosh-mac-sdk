@@ -45,6 +45,8 @@
 	
 	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
 	
+	<option value="//api/name/locationLoggingEnabled">&nbsp;&nbsp;&nbsp;&nbsp;locationLoggingEnabled</option>
+	
 	<option value="//api/name/showPushnotificationAlert">&nbsp;&nbsp;&nbsp;&nbsp;showPushnotificationAlert</option>
 	
 	
@@ -65,6 +67,8 @@
 	
 	<option value="//api/name/getCustomPushData:">&nbsp;&nbsp;&nbsp;&nbsp;- getCustomPushData:</option>
 	
+	<option value="//api/name/getHWID">&nbsp;&nbsp;&nbsp;&nbsp;- getHWID</option>
+	
 	<option value="//api/name/getPushToken">&nbsp;&nbsp;&nbsp;&nbsp;- getPushToken</option>
 	
 	<option value="//api/name/loadTags">&nbsp;&nbsp;&nbsp;&nbsp;- loadTags</option>
@@ -74,6 +78,8 @@
 	<option value="//api/name/recordGoal:">&nbsp;&nbsp;&nbsp;&nbsp;- recordGoal:</option>
 	
 	<option value="//api/name/recordGoal:withCount:">&nbsp;&nbsp;&nbsp;&nbsp;- recordGoal:withCount:</option>
+	
+	<option value="//api/name/registerForPushNotifications">&nbsp;&nbsp;&nbsp;&nbsp;- registerForPushNotifications</option>
 	
 	<option value="//api/name/sendAppOpen">&nbsp;&nbsp;&nbsp;&nbsp;- sendAppOpen</option>
 	
@@ -86,6 +92,8 @@
 	<option value="//api/name/startLocationTracking">&nbsp;&nbsp;&nbsp;&nbsp;- startLocationTracking</option>
 	
 	<option value="//api/name/stopLocationTracking">&nbsp;&nbsp;&nbsp;&nbsp;- stopLocationTracking</option>
+	
+	<option value="//api/name/unregisterForPushNotifications">&nbsp;&nbsp;&nbsp;&nbsp;- unregisterForPushNotifications</option>
 	
 	
 	
@@ -117,6 +125,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/locationLoggingEnabled">locationLoggingEnabled</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showPushnotificationAlert">showPushnotificationAlert</a></span></li>
 	
 </ul></li>
@@ -139,6 +149,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getCustomPushData:">getCustomPushData:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getHWID">getHWID</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getPushToken">getPushToken</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadTags">loadTags</a></span></li>
@@ -148,6 +160,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recordGoal:">recordGoal:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recordGoal:withCount:">recordGoal:withCount:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerForPushNotifications">registerForPushNotifications</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendAppOpen">sendAppOpen</a></span></li>
 	
@@ -160,6 +174,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startLocationTracking">startLocationTracking</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopLocationTracking">stopLocationTracking</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unregisterForPushNotifications">unregisterForPushNotifications</a></span></li>
 	
 </ul></li>
 
@@ -186,6 +202,9 @@
 						<tr>
 	<td class="specification-title">Inherits from</td>
 	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">SKPaymentTransactionObserver</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">PushNotificationManager.h<br />PushNotificationManager.m</td>
@@ -234,6 +253,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/locationLoggingEnabled">&nbsp;&nbsp;locationLoggingEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/showPushnotificationAlert">&nbsp;&nbsp;showPushnotificationAlert</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -247,6 +272,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/pushManager">+&nbsp;pushManager</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/registerForPushNotifications">&ndash;&nbsp;registerForPushNotifications</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unregisterForPushNotifications">&ndash;&nbsp;unregisterForPushNotifications</a></code>
 	</span>
 	
 	
@@ -313,6 +350,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/getPushToken">&ndash;&nbsp;getPushToken</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getHWID">&ndash;&nbsp;getHWID</a></code>
 	</span>
 	
 	
@@ -469,6 +512,47 @@ Pushwoosh Runtime sets it to ApplicationDelegate by default</p>
 		<h4 class="method-subtitle">Discussion</h4>
 		<p><a href="../Protocols/PushNotificationDelegate.html"><code>PushNotificationDelegate</code></a> protocol delegate that would receive the information about events for push notification manager such as registering with APS services, receiving push notifications or working with the received notification.
 Pushwoosh Runtime sets it to ApplicationDelegate by default</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PushNotificationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/locationLoggingEnabled" title="locationLoggingEnabled"></a>
+	<h3 class="subsubtitle method-title">locationLoggingEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables gathering location tracking logs to Documents/PWLocationTracking.log. Default is &lsquo;NO&rsquo;</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL locationLoggingEnabled</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Enables gathering location tracking logs to Documents/PWLocationTracking.log. Default is &lsquo;NO&rsquo;</p>
 	</div>
 	
 	
@@ -782,6 +866,54 @@ Pushwoosh Runtime sets it to ApplicationDelegate by default</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/getHWID" title="getHWID"></a>
+	<h3 class="subsubtitle method-title">getHWID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Gets HWID. Unique device identifier that used in all API calls with Pushwoosh.
+This is identifierForVendor for iOS >= 7.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)getHWID</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Unique device identifier.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Gets HWID. Unique device identifier that used in all API calls with Pushwoosh.
+This is identifierForVendor for iOS >= 7.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PushNotificationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/getPushToken" title="getPushToken"></a>
 	<h3 class="subsubtitle method-title">getPushToken</h3>
 	
@@ -1034,6 +1166,49 @@ Additional count parameter is responsible for storing the additional information
 
 <pre><code>[[PushNotificationsManager pushManager] recordGoal:@"purchase" withCount:[NSNumber numberWithInt:"10"];
 </code></pre>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PushNotificationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/registerForPushNotifications" title="registerForPushNotifications"></a>
+	<h3 class="subsubtitle method-title">registerForPushNotifications</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Registers for push notifications. By default registeres for &ldquo;UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert&rdquo; flags.
+Automatically detects if you have &ldquo;newsstand-content&rdquo; in &ldquo;UIBackgroundModes&rdquo; and adds &ldquo;UIRemoteNotificationTypeNewsstandContentAvailability&rdquo; flag.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)registerForPushNotifications</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Registers for push notifications. By default registeres for &ldquo;UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert&rdquo; flags.
+Automatically detects if you have &ldquo;newsstand-content&rdquo; in &ldquo;UIBackgroundModes&rdquo; and adds &ldquo;UIRemoteNotificationTypeNewsstandContentAvailability&rdquo; flag.</p>
 	</div>
 	
 	
@@ -1340,6 +1515,47 @@ This way Pushwoosh server can know what current badge value is set for the appli
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/unregisterForPushNotifications" title="unregisterForPushNotifications"></a>
+	<h3 class="subsubtitle method-title">unregisterForPushNotifications</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Unregisters from push notifications. You should call this method in rare circumstances only, such as when a new version of the app drops support for remote notifications. Users can temporarily prevent apps from receiving remote notifications through the Notifications section of the Settings app. Apps unregistered through this method can always re-register.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)unregisterForPushNotifications</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Unregisters from push notifications. You should call this method in rare circumstances only, such as when a new version of the app drops support for remote notifications. Users can temporarily prevent apps from receiving remote notifications through the Notifications section of the Settings app. Apps unregistered through this method can always re-register.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">PushNotificationManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -1355,7 +1571,7 @@ This way Pushwoosh server can know what current badge value is set for the appli
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Pushwoosh. All rights reserved. (Last updated: 2014-05-25)</span><br />
+						<p><span class="copyright">&copy; 2014 Pushwoosh. All rights reserved. (Last updated: 2014-05-28)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

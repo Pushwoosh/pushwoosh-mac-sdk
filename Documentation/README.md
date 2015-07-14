@@ -1,4 +1,4 @@
-# Pushwoosh iOS Push notifications SDK Documentation #
+# Pushwoosh Mac Push notifications SDK Documentation #
 
 ## Classes
 [PushNotificationsManager](PushNotificationsManager.md)  

@@ -169,7 +169,7 @@ Example:
 
 ### getHWID
 
-Gets HWID. Unique device identifier that used in all API calls with Pushwoosh. This is identifierForVendor for iOS >= 7.
+Gets HWID. Unique device identifier that used in all API calls with Pushwoosh.
 
 ```objc
 - (NSString *)getHWID

@@ -53,7 +53,7 @@ Tells the delegate that the user has pressed OK on the push notification.
 ```
 
 * **pushManager** - The push manager that received the remote notification.
-* **pushNotification** - A dictionary that contains information about the remote notification, potentially including a badge number for the application icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data. The provider originates it as a JSON-defined dictionary that iOS converts to an NSDictionary object; the dictionary may contain only property-list objects plus NSNull. Push dictionary sample:
+* **pushNotification** - A dictionary that contains information about the remote notification, potentially including a badge number for the application icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data. The provider originates it as a JSON-defined dictionary that Mac converts to an NSDictionary object; the dictionary may contain only property-list objects plus NSNull. Push dictionary sample:
 ```
 {
      aps =     {
@@ -76,7 +76,7 @@ Tells the delegate that the push manager has received a remote notification.
 
 * **pushManager** - The push manager that received the remote notification. If this method is implemented `onPushAccepted:withNotification:` will not be called, internal message boxes will not be displayed.
 
-* **pushNotification** - A dictionary that contains information referring to the remote notification, potentially including a badge number for the application icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data. The provider originates it as a JSON-defined dictionary that iOS converts to an NSDictionary object; the dictionary may contain only property-list objects plus NSNull.
+* **pushNotification** - A dictionary that contains information referring to the remote notification, potentially including a badge number for the application icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data. The provider originates it as a JSON-defined dictionary that Mac converts to an NSDictionary object; the dictionary may contain only property-list objects plus NSNull.
 
 * **onStart** - If the application was not active when the push notification was received, the application will be launched with this parameter equal to YES, otherwise the parameter will be NO.
 

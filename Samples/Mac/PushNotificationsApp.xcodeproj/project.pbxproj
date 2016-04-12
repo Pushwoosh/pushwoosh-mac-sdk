@@ -10,7 +10,9 @@
 		503FA86B1934A86D00EBEEFC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503FA86A1934A86D00EBEEFC /* CoreLocation.framework */; };
 		50A980B815E81363003579A4 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A980B715E81363003579A4 /* IOKit.framework */; };
 		50AD8EC41935F38C0071F491 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD8EC31935F38C0071F491 /* StoreKit.framework */; };
-		50AD8EC61936069F0071F491 /* PushNotificationManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50AD8EC51936069F0071F491 /* PushNotificationManager.framework */; };
+		50EC1D231CBDADDE00A8C860 /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EC1D221CBDADDE00A8C860 /* Pushwoosh.framework */; };
+		50EC1D251CBDB58200A8C860 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EC1D241CBDB58200A8C860 /* libz.tbd */; };
+		50EC1D271CBDB58C00A8C860 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 50EC1D261CBDB58C00A8C860 /* libstdc++.tbd */; };
 		AB84567D14D96F4C00A17648 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB84567C14D96F4C00A17648 /* Cocoa.framework */; };
 		AB84568714D96F4C00A17648 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB84568514D96F4C00A17648 /* InfoPlist.strings */; };
 		AB84568914D96F4C00A17648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84568814D96F4C00A17648 /* main.m */; };
@@ -24,7 +26,9 @@
 		503FA86A1934A86D00EBEEFC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		50A980B715E81363003579A4 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		50AD8EC31935F38C0071F491 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		50AD8EC51936069F0071F491 /* PushNotificationManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PushNotificationManager.framework; sourceTree = "<group>"; };
+		50EC1D221CBDADDE00A8C860 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pushwoosh.framework; path = ../../Framework/Pushwoosh.framework; sourceTree = "<group>"; };
+		50EC1D241CBDB58200A8C860 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		50EC1D261CBDB58C00A8C860 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		AB84567814D96F4C00A17648 /* PushNotificationsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushNotificationsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB84567C14D96F4C00A17648 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AB84567F14D96F4C00A17648 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -45,10 +49,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50EC1D271CBDB58C00A8C860 /* libstdc++.tbd in Frameworks */,
+				50EC1D251CBDB58200A8C860 /* libz.tbd in Frameworks */,
 				50AD8EC41935F38C0071F491 /* StoreKit.framework in Frameworks */,
 				503FA86B1934A86D00EBEEFC /* CoreLocation.framework in Frameworks */,
 				50A980B815E81363003579A4 /* IOKit.framework in Frameworks */,
-				50AD8EC61936069F0071F491 /* PushNotificationManager.framework in Frameworks */,
+				50EC1D231CBDADDE00A8C860 /* Pushwoosh.framework in Frameworks */,
 				AB84567D14D96F4C00A17648 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +65,7 @@
 		AB84566D14D96F4C00A17648 = {
 			isa = PBXGroup;
 			children = (
+				50EC1D221CBDADDE00A8C860 /* Pushwoosh.framework */,
 				50A980B715E81363003579A4 /* IOKit.framework */,
 				AB84568214D96F4C00A17648 /* PushNotificationsApp */,
 				AB84567B14D96F4C00A17648 /* Frameworks */,
@@ -77,7 +84,8 @@
 		AB84567B14D96F4C00A17648 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				50AD8EC51936069F0071F491 /* PushNotificationManager.framework */,
+				50EC1D261CBDB58C00A8C860 /* libstdc++.tbd */,
+				50EC1D241CBDB58200A8C860 /* libz.tbd */,
 				50AD8EC31935F38C0071F491 /* StoreKit.framework */,
 				503FA86A1934A86D00EBEEFC /* CoreLocation.framework */,
 				503FA8681934A86100EBEEFC /* Security.framework */,
@@ -229,7 +237,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "Mac Developer: Maxim Konev (34XU5N7HMH)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -245,11 +253,11 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = PushNotificationSDK/PushNotificationManager;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "D2EBD715-4F11-4F06-B648-C0239E49ED73";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -259,7 +267,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_IDENTITY = "Mac Developer: Maxim Konev (34XU5N7HMH)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -269,10 +277,10 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = PushNotificationSDK/PushNotificationManager;
+				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "D2EBD715-4F11-4F06-B648-C0239E49ED73";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -280,18 +288,19 @@
 		AB84569714D96F4C00A17648 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer: Maxim Konev (34XU5N7HMH)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"../../Framework/**",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushNotificationsApp/PushNotificationsApp-Prefix.pch";
 				INFOPLIST_FILE = "PushNotificationsApp/PushNotificationsApp-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushwoosh.macapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D2EBD715-4F11-4F06-B648-C0239E49ED73";
+				PROVISIONING_PROFILE = "f906ccdd-1911-4b53-bf51-a1138487d903";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -299,18 +308,19 @@
 		AB84569814D96F4C00A17648 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer: Maxim Konev (34XU5N7HMH)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"../../Framework/**",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushNotificationsApp/PushNotificationsApp-Prefix.pch";
 				INFOPLIST_FILE = "PushNotificationsApp/PushNotificationsApp-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushwoosh.macapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "D2EBD715-4F11-4F06-B648-C0239E49ED73";
+				PROVISIONING_PROFILE = "f906ccdd-1911-4b53-bf51-a1138487d903";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -298,6 +298,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushNotificationsApp/PushNotificationsApp-Prefix.pch";
 				INFOPLIST_FILE = "PushNotificationsApp/PushNotificationsApp-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pushwoosh.macapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f906ccdd-1911-4b53-bf51-a1138487d903";
@@ -318,6 +319,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PushNotificationsApp/PushNotificationsApp-Prefix.pch";
 				INFOPLIST_FILE = "PushNotificationsApp/PushNotificationsApp-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pushwoosh.macapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f906ccdd-1911-4b53-bf51-a1138487d903";

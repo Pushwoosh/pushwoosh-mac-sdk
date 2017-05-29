@@ -4,7 +4,6 @@
 //
 
 #import "AppDelegate.h"
-#import <Pushwoosh/PushNotificationManager.h>
 
 @implementation AppDelegate
 
@@ -13,11 +12,12 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	self.lblPushStatus.stringValue = @"Registering";
 	
+	[NSUserNotificationCenter defaultUserNotificationCenter].delegate = self;
+	
 	[[PushNotificationManager pushManager] registerForPushNotifications];
 	[PushNotificationManager pushManager].delegate = self;
 	[[PushNotificationManager pushManager] handlePushReceived:[aNotification userInfo]];
 	[[PushNotificationManager pushManager] sendAppOpen];
-
 }
 
 #pragma mark -
@@ -30,12 +30,10 @@
 // system push notification registration error callback, delegate to pushManager
 - (void)application:(NSApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 	[[PushNotificationManager pushManager] handlePushRegistrationFailure:error];
-
 }
 
-// system push notifications callback, delegate to pushManager
-- (void)application:(NSApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-	[[PushNotificationManager pushManager] handlePushReceived:userInfo];
+- (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification {
+	[[PushNotificationManager pushManager] handlePushReceived:notification.userInfo];
 }
 
 - (void) onDidRegisterForRemoteNotificationsWithDeviceToken:(NSString *)token {

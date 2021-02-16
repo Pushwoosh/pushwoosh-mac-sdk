@@ -5,56 +5,59 @@
 
 #import "AppDelegate.h"
 
+@interface AppDelegate ()
+
+@end
+
 @implementation AppDelegate
 
 @synthesize window = _window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	self.lblPushStatus.stringValue = @"Registering";
-	
-	[NSUserNotificationCenter defaultUserNotificationCenter].delegate = self;
-	
-	[[PushNotificationManager pushManager] registerForPushNotifications];
-	[PushNotificationManager pushManager].delegate = self;
-	[[PushNotificationManager pushManager] handlePushReceived:[aNotification userInfo]];
-	[[PushNotificationManager pushManager] sendAppOpen];
+    self.lblPushStatus.stringValue = @"Registering";
+                
+    [NSUserNotificationCenter defaultUserNotificationCenter].delegate = [Pushwoosh sharedInstance].notificationCenterDelegateProxy;
+
+    [Pushwoosh sharedInstance].delegate = self;
+    
+    [[Pushwoosh sharedInstance] handlePushReceived:[aNotification userInfo]];
+    [[Pushwoosh sharedInstance] registerForPushNotifications];
 }
 
 #pragma mark -
 
 // system push notification registration success callback, delegate to pushManager
 - (void)application:(NSApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-	[[PushNotificationManager pushManager] handlePushRegistration:deviceToken];
+    
+    [[Pushwoosh sharedInstance] handlePushRegistration:deviceToken];
+    
+    self.lblPushStatus.stringValue = @"Success";
+    self.lblPushToken.stringValue = [[Pushwoosh sharedInstance] getPushToken];
 }
 
 // system push notification registration error callback, delegate to pushManager
 - (void)application:(NSApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-	[[PushNotificationManager pushManager] handlePushRegistrationFailure:error];
+    self.lblPushStatus.stringValue = @"Failed to register";
+    self.lblPushToken.stringValue = error.localizedDescription;
+    [[Pushwoosh sharedInstance] handlePushRegistrationFailure:error];
 }
 
-- (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification {
-	[[PushNotificationManager pushManager] handlePushReceived:notification.userInfo];
+- (void)pushwoosh:(Pushwoosh *)pushwoosh onMessageOpened:(PWMessage *)message {
+    self.lblPushStatus.stringValue = @"Push opened";
+    self.lblPushPayload.stringValue = [NSString stringWithFormat:@"%@", message.message];
 }
 
-- (void) onDidRegisterForRemoteNotificationsWithDeviceToken:(NSString *)token {
-	self.lblPushStatus.stringValue = @"Success";
-	self.lblPushToken.stringValue = [[PushNotificationManager pushManager] getPushToken];
+- (void)pushwoosh:(Pushwoosh *)pushwoosh onMessageReceived:(PWMessage *)message {
+    self.lblPushStatus.stringValue = @"Push received";
+    self.lblPushPayload.stringValue = [NSString stringWithFormat:@"%@", message.message];
 }
 
-- (void) onDidFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-	self.lblPushStatus.stringValue = @"Error";
-	self.lblPushToken.stringValue = error.localizedDescription;
+- (IBAction)showGDPRConsentUIButtonAction:(id)sender {
+    [[PWGDPRManager sharedManager] showGDPRConsentUI];
 }
 
-- (void) onPushAccepted:(PushNotificationManager *)pushManager withNotification:(NSDictionary *)pushNotification onStart:(BOOL)onStart {
-	self.lblPushStatus.stringValue = @"Push received";
-	self.lblPushPayload.stringValue = pushNotification.description;
-}
-
-#pragma mark -
-
-- (void)dealloc {
-	[super dealloc];
+- (IBAction)showGDPRDeleteUIButtonAction:(id)sender {
+    [[PWGDPRManager sharedManager] showGDPRDeletionUI];
 }
 
 @end

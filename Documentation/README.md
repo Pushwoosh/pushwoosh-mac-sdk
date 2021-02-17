@@ -1,5 +1,17 @@
 # Pushwoosh Mac Push notifications SDK Documentation #
 
 ## Classes
-[PushNotificationsManager](PushNotificationsManager.md)  
-[PushNotificationDelegate](PushNotificationDelegate.md)  
+[PushNotificationManager](PushNotificationManager.md)  
+[PushNotificationDelegate](PushNotificationDelegate-p.md)  
+[PWInAppManager](PWInAppManager.md)  
+[PWJavaScriptInterface](PWJavaScriptInterface.md)  
+[PWJavaScriptCallback](PWJavaScriptCallback.md)  
+[PWRichMedia](PWRichMedia.md)  
+[PWRichMediaManager](PWRichMediaManager.md)  
+[PWRichMediaPresentingDelegate](PWRichMediaPresentingDelegate-p.md)  
+[PWGDPRManager](PWGDPRManager.md)  
+[PWGeozonesManager](PWGeozonesManager.md)  
+[PWGeozonesDelegate](PWGeozonesDelegate-p.md)  
+
+## Information property list
+[Info.plist](InfoPlist.md)  

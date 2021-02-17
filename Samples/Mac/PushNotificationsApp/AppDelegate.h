@@ -4,9 +4,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Pushwoosh/PushNotificationManager.h>
+#import <Pushwoosh/Pushwoosh.h>
+#import <Pushwoosh/PWGDPRManager.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserNotificationCenterDelegate, PushNotificationDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate, PWMessagingDelegate> {
 }
 
 @property (assign) IBOutlet NSWindow *window;

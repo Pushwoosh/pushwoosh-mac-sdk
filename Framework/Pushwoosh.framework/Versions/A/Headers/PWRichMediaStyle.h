@@ -95,8 +95,9 @@ typedef PWLoadingView *(^PWRichMediaLoadingViewBlock)(void);
  };
  @endcode
  */
+#if TARGET_OS_IOS
 @property (nonatomic) PWRichMediaLoadingViewBlock loadingViewBlock;
-
+#endif
 /**
  Delay of the close button presenting in seconds.
  */

@@ -5,6 +5,8 @@ Pushwoosh Mac OS X SDK
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Pushwoosh.svg)](https://cocoapods.org)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
+[![Guide](https://img.shields.io/badge/guide-latest-brightgreen.svg?style=flat-square)](https://docs.pushwoosh.com/platform-docs/pushwoosh-sdk/os-x)
+
 The SDK contains source code for Mac OS X platform.
 
 The guilde for SDK integration is available on Pushwoosh website:  

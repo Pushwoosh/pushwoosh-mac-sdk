@@ -1,6 +1,9 @@
 Pushwoosh Mac OS X SDK
 =====================
 
+[![GitHub release](https://img.shields.io/github/release/Pushwoosh/pushwoosh-mac-sdk.svg?style=flat-square)](https://github.com/Pushwoosh/pushwoosh-mac-sdk/releases) 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 The SDK contains source code for Mac OS X platform.
 
 The guilde for SDK integration is available on Pushwoosh website:  
